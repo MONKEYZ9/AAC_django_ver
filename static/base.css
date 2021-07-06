@@ -1,0 +1,27 @@
+* {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.header_box {
+    text-align: center;
+}
+
+.header_logo {
+    margin-top: 1.5rem;
+}
+
+.header_button {
+    margin: 2rem 0;
+}
+
+.footer_box {
+    text-align: center;
+}
+
+.footer_logo {
+    margin-top: 1.5rem;
+}
+
+.footer_button {
+    margin: 2rem 0;
+}

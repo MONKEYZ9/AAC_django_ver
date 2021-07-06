@@ -7,3 +7,4 @@
 ###7/6
 - googlefonts 적용
 - bootstrap 적용
+- css 따로 만들어서 적용
