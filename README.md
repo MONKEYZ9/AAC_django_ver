@@ -8,3 +8,6 @@
 - googlefonts 적용
 - bootstrap 적용
 - css 따로 만들어서 적용
+
+###0708
+- model 생성
