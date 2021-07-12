@@ -1,6 +1,9 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+from django.urls import reverse
+
 from accountapp.models import HelloWorld
 
 
@@ -12,11 +15,8 @@ def hello_world(req):
         new_hello_world.text = temp
         new_hello_world.save()
 
-        new_hello_world_list = HelloWorld.objects.all()
+        return HttpResponseRedirect(reverse('accountapp:hello world'))
 
-
-        return render(req, 'accountapp/hello_world.html',
-                      context={'new_hello_world' : new_hello_world, 'new_hello_world_list' : new_hello_world_list})
     else:
         new_hello_world_list = HelloWorld.objects.all()
 
