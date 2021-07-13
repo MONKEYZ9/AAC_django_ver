@@ -20,3 +20,6 @@
 
 ###0713
 - createView 생성
+- 회원가입 폼을 적용 (일단, 실행)
+- 로그인(settin.py LOGIN_REDIRECT_URL 다시 설정)
+- 
