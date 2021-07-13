@@ -17,3 +17,6 @@
 - 모델의 text 추출
 - 모델의 객체 전부 추출
 - rediect 설정
+
+###0713
+- createView 생성

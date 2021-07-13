@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="content_box2" style="height: 10rem; background-color: #7c7c7c; border-radius: 1rem; margin: 2rem;">
+    <div class="content_box2 w-75" style="height: 10rem; background-color: #7c7c7c; border-radius: 1rem; margin: 2rem;">
         <h1>test</h1>
         <form action="/accountapp/hello_world/" method="post">
                 {% csrf_token %}
