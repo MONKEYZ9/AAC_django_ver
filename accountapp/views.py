@@ -26,8 +26,9 @@ def hello_world(req):
         return render(req, 'accountapp/hello_world.html',
                       context={'new_hello_world_list': new_hello_world_list})
 
+
 class AccountCreateView(CreateView):
-    model =User
-    form_class =UserCreationForm
-    success_url =reverse_lazy('accountapp:hello world')
-    template_name ='accountapp/create.html'
+    model = User
+    form_class = UserCreationForm
+    success_url = reverse_lazy('accountapp:hello world')
+    template_name = 'accountapp/create.html'

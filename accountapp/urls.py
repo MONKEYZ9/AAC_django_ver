@@ -6,5 +6,5 @@ app_name = 'accountapp'
 
 urlpatterns = [
     path('hello_world/', hello_world, name='hello world'),
-    path('create/', AccountCreateView.as_view, name='create'),
+    path('create/', AccountCreateView.as_view(), name='create')
 ]
