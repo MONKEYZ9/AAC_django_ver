@@ -16,6 +16,11 @@
                 </span>
 
             {% else %}
+                 {# 회원정보 #}
+                <span>
+                    <a href="{% url 'accountapp:detail' pk=user.pk %}">Detail</a>
+                </span>
+
                  {# 로그아웃 #}
                 <span>
                     <a href="{% url 'accountapp:logout' %}">Logout</a>
