@@ -25,3 +25,8 @@
 .footer_button {
     margin: 2rem 0;
 }
+
+.mw-500{
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+}
