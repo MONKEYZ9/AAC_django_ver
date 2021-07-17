@@ -35,3 +35,4 @@
 - 회원 탈퇴 urls, path 추가
 - Authentication 인증 시스템을 구축
 - Decator를 이용한 코드 간소화
+- 본인인지 확인 하는 작업
