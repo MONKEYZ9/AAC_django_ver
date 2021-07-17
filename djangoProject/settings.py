@@ -155,3 +155,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello world')
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
+
+# 주소창에 미디어 이하의 루트에 접근해야 파일에 접근가능
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

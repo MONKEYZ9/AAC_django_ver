@@ -35,4 +35,7 @@
 - 회원 탈퇴 urls, path 추가
 - Authentication 인증 시스템을 구축
 - Decator를 이용한 코드 간소화
-- 본인인지 확인 하는 작업
+- 본인인지 확인 하는 작업 및 타인거 못 건들게 함
+- 관리자 계정 생성
+- 미디어 계정 media url 생성
+- 장고 이미지 관리 ilb 설치(pillow)
