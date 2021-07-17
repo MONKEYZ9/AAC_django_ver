@@ -47,3 +47,4 @@
 3. Profileapp Implementaion
 - Profileapp 디렉토리 설정 
 - modelform 생성
+- view 랑 model 설정
