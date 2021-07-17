@@ -30,12 +30,20 @@
 - 회원정보 urls, path 파라메터값 받아주기
 
 ###0717
+1. Accountapp implementaion
 - 회원정보 업데이트 form.py 생성으로 새로운 폼 커스터마이즈
 - 회원 탈퇴 detail에 탈퇴버튼 추가
 - 회원 탈퇴 urls, path 추가
+  
+2. Authentication
 - Authentication 인증 시스템을 구축
 - Decator를 이용한 코드 간소화
 - 본인인지 확인 하는 작업 및 타인거 못 건들게 함
 - 관리자 계정 생성
+  python manage.py createsuperuser
 - 미디어 계정 media url 생성
 - 장고 이미지 관리 ilb 설치(pillow)
+
+3. Profileapp Implementaion
+- Profileapp 디렉토리 설정 
+- modelform 생성
