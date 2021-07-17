@@ -13,6 +13,10 @@ from accountapp.decorator import account_ownership_required
 from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 
+# 코드 줄이기
+has_ownership = [login_required, account_ownership_required]
+
+
 @login_required
 def hello_world(req):
     if req.method == 'POST':
@@ -45,10 +49,8 @@ class AccountDetailView(DetailView):
 
 
 # 회원정보 업데이트
-@method_decorator(login_required, 'get')
-@method_decorator(login_required, 'post')
-@method_decorator(account_ownership_required, 'get')
-@method_decorator(account_ownership_required, 'post')
+@method_decorator(has_ownership, 'get')
+@method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView):
     model = User  # class AbstractUser(AbstractBaseUser, PermissionsMixin): 여기 함 들어가서 어떻게 되있나 봐봐라
     context_object_name = 'target_user'
@@ -60,10 +62,8 @@ class AccountUpdateView(UpdateView):
 
 
 # 탈퇴
-@method_decorator(login_required, 'get')
-@method_decorator(login_required, 'post')
-@method_decorator(account_ownership_required, 'get')
-@method_decorator(account_ownership_required, 'post')
+@method_decorator(has_ownership, 'get')
+@method_decorator(has_ownership, 'post')
 class AccountDeleteView(DeleteView):
     model = User
     context_object_name = 'target_user'
