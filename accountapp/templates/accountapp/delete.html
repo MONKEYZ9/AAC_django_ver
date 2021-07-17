@@ -11,7 +11,7 @@
         </div>
         <div>
             {# 탈퇴 #}
-            <form action="{% url 'accountapp:delete' pk=user.pk %}" method="post">
+            <form action="{% url 'accountapp:delete' pk= target_user.pk %}" method="post">
                 {% csrf_token %}
                 <div class="m-5">
                     {# btn-danger 는 부트스트랩에서 확인하자 #}

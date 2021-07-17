@@ -44,6 +44,7 @@ class AccountDetailView(DetailView):
 # 회원정보 업데이트
 class AccountUpdateView(UpdateView):
     model = User  # class AbstractUser(AbstractBaseUser, PermissionsMixin): 여기 함 들어가서 어떻게 되있나 봐봐라
+    context_object_name = 'target_user'
     form_class = AccountUpdateForm  # 새롭게 만든 폼.py를 만들어서 옮겼어
     success_url = reverse_lazy('accountapp:hello world')
     template_name = 'accountapp/update.html'
@@ -52,5 +53,6 @@ class AccountUpdateView(UpdateView):
 # 탈퇴
 class AccountDeleteView(DeleteView):
     model = User
+    context_object_name = 'target_user'
     success_url = reverse_lazy('accountapp:login')
     template_name = 'accountapp/delete.html'
