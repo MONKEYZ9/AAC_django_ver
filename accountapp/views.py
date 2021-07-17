@@ -5,8 +5,9 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.urls import reverse, reverse_lazy
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, DetailView, UpdateView
 
+from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 
 
@@ -40,3 +41,9 @@ class AccountDetailView(DetailView):
     template_name = 'accountapp/detail.html'
 
 
+# 회원정보 업데이트
+class AccountUpdateView(UpdateView):
+    model = User  # class AbstractUser(AbstractBaseUser, PermissionsMixin): 여기 함 들어가서 어떻게 되있나 봐봐라
+    form_class = AccountUpdateForm  # 새롭게 만든 폼.py를 만들어서 옮겼어
+    success_url = reverse_lazy('accountapp:hello world')
+    template_name = 'accountapp/update.html'
