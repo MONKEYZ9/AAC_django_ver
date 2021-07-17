@@ -33,4 +33,5 @@
 - 회원정보 업데이트 form.py 생성으로 새로운 폼 커스터마이즈
 - 회원 탈퇴 detail에 탈퇴버튼 추가
 - 회원 탈퇴 urls, path 추가
-- 
+- Authentication 인증 시스템을 구축
+- Decator를 이용한 코드 간소화
