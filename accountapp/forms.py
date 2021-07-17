@@ -2,7 +2,7 @@
 from django.contrib.auth.forms import UserCreationForm
 
 
-#  유저 네임의 칸을 비활성화해주는거야
+#  유저 네임의 칸을 비활성
 class AccountUpdateForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
