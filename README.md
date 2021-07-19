@@ -64,3 +64,4 @@
 - profile이 update a태그 & update.html 추가
 - 사진을 보이게 하는 것은 전체 setting.py에 django.conf.urls.static의 static 추가
 - decorator 추가
+- success_url을 pk를 받아서 올 수 있게끔 수정

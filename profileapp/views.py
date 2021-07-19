@@ -17,7 +17,8 @@ class ProfileCreateView(CreateView):
     # 이걸 detail로 가고 싶다면 설정해줘야 해 내부 메소드를 수정해서
     # success_url = reverse_lazy('accountapp:hello world')
     template_name = 'profileapp/create.html'
-    
+
+
     def get_success_url(self):
         return reverse('accountapp:detail', kwargs={'pk' : self.object.user.pk})
     
@@ -41,6 +42,7 @@ class ProfileUpdateView(UpdateView):
     # 이거도 해주자
     # success_url = reverse_lazy('accountapp:hello world')
     template_name = 'profileapp/update.html'
+
 
     def get_success_url(self):
         return reverse('accountapp:detail', kwargs={'pk': self.object.user.pk})
