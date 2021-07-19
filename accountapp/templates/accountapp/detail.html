@@ -5,22 +5,21 @@
     <div class="text-center mw-500 m-auto">
         <div class="m-5">
             <p>
-                <h4>{{ target_user.username }}</h4>
+            <h4>{{ target_user.username }}</h4>
             </p>
-            {% if targer_user.profile %}
 
-            <h2>
-                {{ target_user.profile.nickname }}
-            </h2>
-            {% else %}
-            <a href="{% url 'profileapp:create' %}">
+            {% if target_user.profile %}
                 <h2>
-                    Create Profile
+                    {{ target_user.profile.nickname }}
                 </h2>
-            </a>
+
+            {% else %}
+                <a href="{% url 'profileapp:create' %}">
+                    <h2>
+                        Create Profile
+                    </h2>
+                </a>
             {% endif %}
-
-
         </div>
         <div>
             <h2>

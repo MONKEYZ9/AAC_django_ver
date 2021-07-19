@@ -14,3 +14,15 @@ class ProfileCreateView(CreateView):
     form_class = ProfileCreationForm
     success_url = reverse_lazy('accountapp:hello world')
     template_name = 'profileapp/create.html'
+    
+    
+    #  form_valid를 불러서
+    # 커스터마이징을 해서 다시 보내자
+    def form_valid(self, form):
+        # form을 받은게 실제 db에 저장하지 않고
+        temp_profile = form.save(commit=False)
+        # 유저를 가져와서 유저에 담아
+        temp_profile.user = self.request.user
+        # 저장하기
+        temp_profile.save()
+        return super().form_valid(form)
