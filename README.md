@@ -61,3 +61,5 @@
 - accountdetail에 profile create 경로 수정
 - enctype="multipart/form-data" 을 추가함으로 사진을 추가할 수 있게끔
 - model에서 user을 가지고 만들어놨는데
+- profile이 update a태그 & update.html 추가
+- 사진을 보이게 하는 것은 전체 setting.py에 django.conf.urls.static의 static 추가
