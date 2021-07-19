@@ -52,4 +52,11 @@
 - # path('profiles/', include('profileapp.urls')),
 - python manage.py makemigrations
 - python manage.py migrate 가 안된 이유를 찾았다.
-- 비어져있는 것으로 연결을 하려다보니까 안되는 건데 이는 
+- 비어져있는 것으로 연결을 하려다보니까 안되는 건데
+
+### 0719
+1. profileapp 
+- CreateView 작성
+- create urls, view urlspattern 수정
+- accountdetail에 profile create 경로 수정
+- 

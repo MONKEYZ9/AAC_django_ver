@@ -59,7 +59,17 @@ class AccountUpdateView(UpdateView):
     template_name = 'accountapp/update.html'
     
     # 본인인지 확인 하는 것은 커스텀 데코
-
+    # def get(self, *args, **kwargs):
+    #     if self.request.user.is_authenticated and self.get_object():
+    #         return super().get(*args, **kwargs)
+    #     else:
+    #         return HttpResponseForbidden()
+    #
+    # def post(self, *args, **kwargs):
+    #     if self.request.user.is_authenticated and self.get_object():
+    #         return super().get(*args, **kwargs)
+    #     else:
+    #         return HttpResponseForbidden()
 
 # 탈퇴
 @method_decorator(has_ownership, 'get')
@@ -71,4 +81,14 @@ class AccountDeleteView(DeleteView):
     template_name = 'accountapp/delete.html'
 
     # 본인인지 확인 하는 것은 커스텀 데코
-
+    # def get(self, *args, **kwargs):
+    #     if self.request.user.is_authenticated and self.get_object():
+    #         return super().get(*args, **kwargs)
+    #     else:
+    #         return HttpResponseForbidden()
+    #
+    # def post(self, *args, **kwargs):
+    #     if self.request.user.is_authenticated and self.get_object():
+    #         return super().get(*args, **kwargs)
+    #     else:
+    #         return HttpResponseForbidden()
