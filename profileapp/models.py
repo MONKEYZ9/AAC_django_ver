@@ -1,12 +1,14 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+
 # Create your models here.
 
 class Profile(models.Model):
     # ondelete 연결된 객체가 삭제될때의 정책 부분을 담당하는것
-    # CASCADE는 그렇다는 것
-    user = models.OneToOneField(User, on_delete=models.CASCADE(), related_name='profile')
+    # CASCADE는 이 프로필이 없어지게
+    # related_name으로 바로 연결할 수 있게
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     # upload_to 이미지를 저장할 건데 경로를 정해주는 것
     # 미디어 경로를 설정해줄 때 하위 주소로 적히게 된다는 것
     image = models.ImageField(upload_to='profile/', null=True)

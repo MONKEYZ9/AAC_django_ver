@@ -45,6 +45,11 @@
 - 장고 이미지 관리 ilb 설치(pillow)
 
 3. Profileapp Implementaion
+1. python manage.py startapp profileapp
 - Profileapp 디렉토리 설정 
 - modelform 생성
 - view 랑 model 설정
+- # path('profiles/', include('profileapp.urls')),
+- python manage.py makemigrations
+- python manage.py migrate 가 안된 이유를 찾았다.
+- 비어져있는 것으로 연결을 하려다보니까 안되는 건데 이는 
