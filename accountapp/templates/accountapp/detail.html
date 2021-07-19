@@ -12,7 +12,10 @@
                 <h2>
                     {{ target_user.profile.nickname }}
                 </h2>
-
+                <br>
+                <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                    edit
+                </a>
             {% else %}
                 <a href="{% url 'profileapp:create' %}">
                     <h2>
