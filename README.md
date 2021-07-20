@@ -81,6 +81,6 @@ for (let i = 0; i < masonarys.length; i++) {
         magicGrid.positionItems();
     }, false)
 }`
-- 이미지를 가져올건데
+3. 이미지를 가져올건데
 https://picsum.photos/ 에서 랜덤한 크기에 맞는 것을 가져올거야
 - 13개를 만들어줌
