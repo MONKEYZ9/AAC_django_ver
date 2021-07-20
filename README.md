@@ -65,3 +65,22 @@
 - 사진을 보이게 하는 것은 전체 setting.py에 django.conf.urls.static의 static 추가
 - decorator 추가
 - success_url을 pk를 받아서 올 수 있게끔 수정
+
+### 0720
+1. MagicGrid 자바스크립트 라이브러리를 사용
+- python manage.py startapp articleapp 아티클앱을 시작하자
+- setting.py, urls 설정하고
+- urls 생성한뒤, 연결
+2. MagicGrid 사용하기
+- https://github.com/e-oj/Magic-Grid
+- 여기서 가져온 것을 그대로 복붙하고 js 를 static에 추가
+- 그리고 이미지가 유동적으로 움직일 수 있게
+- `var masonarys = document.getElementsByTagName("img");
+for (let i = 0; i < masonarys.length; i++) {
+    masonarys[i].addEventListener('load', function () {
+        magicGrid.positionItems();
+    }, false)
+}`
+- 이미지를 가져올건데
+https://picsum.photos/ 에서 랜덤한 크기에 맞는 것을 가져올거야
+- 13개를 만들어줌

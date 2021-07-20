@@ -19,9 +19,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accountapp.urls')),
-    path('profiles/', include('profileapp.urls')),
-#     미디어 관련 셋팅
-#     이런식으로 저장해줘야 서버에서 이걸 찾아준다는 거야
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('accounts/', include('accountapp.urls')),
+                  path('profiles/', include('profileapp.urls')),
+                  path('articleapp/', include('articleapp.urls')),
+                  #     미디어 관련 셋팅
+                  #     이런식으로 저장해줘야 서버에서 이걸 찾아준다는 거야
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
